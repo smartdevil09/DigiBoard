@@ -1,0 +1,43 @@
+<h2>Create Course </h2>
+<form [formGroup]="CourseRegistrationForm" (ngSubmit)="onSubmit()">
+  <div>
+    <mat-form-field appearance="outline" >
+    <mat-label>Course Name</mat-label>
+    <input matInput id="CourseName" name="CourseName" formControlName="CourseName" required></mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Instructor Name</mat-label>
+    <input matInput id="InstructorName" name="InstructorName" formControlName="InstructorName" required></mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline"><mat-label>Instructor Email</mat-label>
+    <input matInput id="InstructorEmail" name="InstructorEmail" formControlName="InstructorEmail" required email></mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Instructor Phone</mat-label>
+    <input matInput id="InstructorPhone" name="InstructorPhone"  formControlName="InstructorPhone" required pattern="[0-9]*"></mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Course Duration</mat-label>
+    <input matInput id="CourseDuration" name="CourseDuration" formControlName="CourseDuration" required></mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline" >
+      <mat-label>Course Description</mat-label>
+    <input matInput id="CourseDescription" name="CourseDescription" formControlName="CourseDescription" required></mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline" >
+      <mat-label>Course Outcome</mat-label>
+    <input matInput id="CourseOutcome" name="CourseOutcome" formControlName="CourseOutcome" required></mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Course Pre-Requisites</mat-label>
+    <input matInput id="CoursePreRequisites" name="CoursePreRequisites" formControlName="CoursePreRequisites" required></mat-form-field>
+  </div>
+  <button type="submit" mat-raised-button color="primary" >Submit</button>
+</form>
