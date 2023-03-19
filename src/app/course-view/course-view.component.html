@@ -1,1 +1,7 @@
-<p>course-view works!</p>
+<div>
+    <ul *ngFor="let course of courses let i = index">
+        <li> {{course.CourseName}} <br/>{{course.InstructorName}} <br/> {{course.InstructorEmail}} <br/>{{course.InstructorPhone}} <br/>
+            {{course.CourseDuration}} <br/> {{course.CourseDescription}} <br/>{{course.CourseOutcome}}<br/>
+            {{course.CoursePreRequisites}} </li>
+    </ul>
+</div>
