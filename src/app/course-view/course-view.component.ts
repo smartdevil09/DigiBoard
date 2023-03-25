@@ -1,13 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CourseService } from '../course.service';
 
 @Component({
   selector: 'app-course-view',
   templateUrl: './course-view.component.html',
   styleUrls: ['./course-view.component.css']
 })
-export class CourseViewComponent {
-  json = `[ { "CourseName" : "IT Service Delivery" , "InstructorName" : "Dr. Maria", "InstructorEmail" : "shdv@sdhjb.com", "InstructorPhone" : "236537223","CourseDuration" : "6 months", "CourseDescription" : "test description", "CourseOutcome" : "Lifecyle of ITIL", "CoursePreRequisites" : "ITIL" }, 
-  {  "CourseName" : "IT Info Sec admin" , "InstructorName" : "Dr. Yang", "InstructorEmail" : "sd@dfh.com", "InstructorPhone" : "8374373478","CourseDuration" : "6 months", "CourseDescription" : "testg djbs", "CourseOutcome" : "Intro to info sec", "CoursePreRequisites" : "Network" }
-  ]`;
-  courses = JSON.parse(this.json);
+export class CourseViewComponent implements OnInit {
+  //declare variable to hold response and make it public to be accessible from components.html
+  public courses: any;
+  //initialize the call using StudentService 
+  constructor(private _myService: CourseService) { }
+  ngOnInit() {
+      this.getCourses();
+  }
+  //method called OnInit
+  getCourses() {
+      this._myService.getCourses().subscribe(
+          //read data and assign to public variable students
+          data => { this.courses = data},
+          err => console.error(err),
+          () => console.log('finished loading')
+      );
+  }
 }

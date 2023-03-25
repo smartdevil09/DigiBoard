@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-course-create',
@@ -7,18 +8,18 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./course-create.component.css']
 })
 export class CourseCreateComponent {
-  CourseCreateForm= new FormGroup({
-  CourseName: new FormControl(),
-  InstructorName: new FormControl(),
-  InstructorEmail: new FormControl(),
-  InstructorPhone: new FormControl(),
-  CourseDuration: new FormControl(),
-  CourseDescription: new FormControl(),
-  CoursePreRequisites: new FormControl(),
-  CourseOutcome: new FormControl()
-})
+  
+  @Input() CourseName:string ="";
+  @Input() InstructorName: string ="";
+  @Input() InstructorEmail: string ="";
+  @Input() InstructorPhone: string ="";
+  @Input() CourseDuration: string ="";
+  @Input() CourseDescription: string ="";
+  @Input() CoursePreRequisites: string ="";
+  @Input() CourseOutcome: string ="";
+
 onSubmit()
 {
-  console.warn(this.CourseCreateForm.value);
+  console.warn(this.CourseName);
 }
 }
