@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-course-registration',
-  templateUrl: './course-registration.component.html',
-  styleUrls: ['./course-registration.component.css']
+  selector: 'app-course-create',
+  templateUrl: './course-create.component.html',
+  styleUrls: ['./course-create.component.css']
 })
-export class CourseRegistrationComponent {
-  CourseRegistrationForm= new FormGroup({
+export class CourseCreateComponent {
+  CourseCreateForm= new FormGroup({
   CourseName: new FormControl(),
   InstructorName: new FormControl(),
   InstructorEmail: new FormControl(),
@@ -19,6 +19,6 @@ export class CourseRegistrationComponent {
 })
 onSubmit()
 {
-  console.warn(this.CourseRegistrationForm.value);
+  console.warn(this.CourseCreateForm.value);
 }
 }

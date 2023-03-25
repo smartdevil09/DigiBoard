@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { CourseRegistrationComponent } from './course-registration/course-registration.component';
+import { CourseCreateComponent } from './course-create/course-create.component';
 import { CourseViewComponent } from './course-view/course-view.component';
 import { CourseUpdateComponent } from './course-update/course-update.component';
 import { CourseDeleteComponent } from './course-delete/course-delete.component';
@@ -22,7 +22,7 @@ import {MatIconModule} from '@angular/material/icon';
   declarations: [
     AppComponent,
     AdminDashboardComponent,
-    CourseRegistrationComponent,
+    CourseCreateComponent,
     CourseViewComponent,
     CourseUpdateComponent,
     CourseDeleteComponent,
