@@ -19,13 +19,16 @@ import {MatIconModule} from '@angular/material/icon';
 import { CourseService } from './course.service';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 
 const routes: Routes = [
   { path: 'dashboard', component: AdminDashboardComponent },
-  { path: 'course-registration', component: CourseCreateComponent},
+  { path: 'course-create', component: CourseCreateComponent},
   { path: 'course-view', component: CourseViewComponent},
+  { path: 'editCourse/:_id', component: CourseCreateComponent },
+  { path: '**',  component: NotFoundComponent }
 ];
-
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ const routes: Routes = [
     CourseViewComponent,
     CourseUpdateComponent,
     CourseDeleteComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

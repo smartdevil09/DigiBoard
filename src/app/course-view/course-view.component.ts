@@ -9,7 +9,7 @@ import { CourseService } from '../course.service';
 export class CourseViewComponent implements OnInit {
   //declare variable to hold response and make it public to be accessible from components.html
   public courses: any;
-  //initialize the call using StudentService 
+  //initialize the call using CourseService 
   constructor(private _myService: CourseService) { }
   ngOnInit() {
       this.getCourses();
@@ -17,10 +17,14 @@ export class CourseViewComponent implements OnInit {
   //method called OnInit
   getCourses() {
       this._myService.getCourses().subscribe(
-          //read data and assign to public variable students
+          //read data and assign to public variable course
           data => { this.courses = data},
           err => console.error(err),
           () => console.log('finished loading')
       );
   }
+
+  onDelete(courseId: string) {
+    this._myService.deleteCourse(courseId);
+}
 }

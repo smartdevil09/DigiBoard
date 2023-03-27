@@ -2,6 +2,8 @@
     <ul *ngFor="let course of courses let i = index">
         <li> {{course.CourseName}} <br/>{{course.InstructorName}} <br/> {{course.InstructorEmail}} <br/>{{course.InstructorPhone}} <br/>
             {{course.CourseDuration}} <br/> {{course.CourseDescription}} <br/>{{course.CourseOutcome}}<br/>
-            {{course.CoursePreRequisites}} </li>
+            {{course.CoursePreRequisites}} <br/>
+            <button mat-button color="accent" [routerLink]="['/editCourse', course._id]">EDIT</button>
+            <button mat-button color="warn" (click)="onDelete(course._id)">DELETE</button> </li> 
     </ul>
 </div>
