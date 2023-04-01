@@ -1,26 +1,18 @@
 <div class="container">
-<mat-toolbar color="primary">
+  <mat-toolbar color="primary">
     <mat-toolbar-row>
-          <div class="example-button-container">
-            <button mat-fab color="primary" aria-label="Example icon button with a home icon">
-              <mat-icon>home</mat-icon>
-            </button>
-          </div>
-        <span>DigiBoard</span>
+      <div class="example-button-container">
+        <button mat-fab color="primary" aria-label="Example icon button with a home icon" [routerLink]="['']">
+          <mat-icon>home</mat-icon>
+        </button>
+      </div>
+      <span>DigiBoard</span>
     </mat-toolbar-row>
-    </mat-toolbar></div>
+  </mat-toolbar>
+</div>
 
-    <nav mat-tab-nav-bar ngClass = "tabs">
-      <a mat-tab-link routerLink="/course-create" routerLinkActive="active-link">Create Course</a>
-      <a mat-tab-link routerLink="/course-view" routerLinkActive="active-link">View Courses</a>
-   </nav>  
-   <div>	
-     <router-outlet></router-outlet>	
-   </div> 
-            <!--
-<mat-tab label="Course Create"> <app-course-create></app-course-create></mat-tab>
-        <mat-tab label="View Courses"><app-course-view></app-course-view></mat-tab>
-      -->
-        
-    
-    
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a mat-tab-link routerLink="/course-create" routerLinkActive="active-link" >Create Course</a>
+  <a mat-tab-link routerLink="/course-view" routerLinkActive="active-link">View Courses</a>
+  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+</nav>

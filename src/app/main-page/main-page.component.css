@@ -1,4 +1,12 @@
-h1 {
+mat-toolbar .spacer {
+    flex: 1 1 auto;
+  }
+  
+  mat-toolbar button {
+    margin-left: auto;
+  }
+
+  h1 {
     font-size: 5em;
     font-weight: bold;
     color: #333;

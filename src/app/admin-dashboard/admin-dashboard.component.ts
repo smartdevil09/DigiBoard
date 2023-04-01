@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {ThemePalette} from '@angular/material/core';
 @Component({
   selector: 'app-admin-dashboard',
@@ -6,7 +6,5 @@ import {ThemePalette} from '@angular/material/core';
   styleUrls: ['./admin-dashboard.component.css']
 })
 export class AdminDashboardComponent {
-  links = ['course-create', 'course-view'];
-  activeLink = this.links[0];
-  background: ThemePalette = undefined;
+  
 }

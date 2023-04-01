@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <div class="example-button-container">
+          <button mat-fab color="primary" aria-label="Example icon button with a home icon" [routerLink]="['']">
+            <mat-icon>home</mat-icon>
+          </button>
+        </div>
+        <span>DigiBoard</span>
+        <span class="spacer"></span>
+    <button mat-button routerLink="/admin-dashboard" mat-button-align-end>Admin</button>
+    <button mat-button routerLink="/student-dashboard" mat-button-align-end>Student</button>
+      </mat-toolbar-row>
+  </mat-toolbar>
+  
+  
+  
+  <div style="display: flex; align-items: center;">
+    <img [src]="'../../assets/main.png'" alt="My GIF" style="width: 700px; height: 630px; margin-right: 20px;">
+    <div>
+      <h1 style="margin-top: 0;"> DIGITAL LEARNING MADE EASY WITH DigiBoard</h1>
+    </div>
+  </div>

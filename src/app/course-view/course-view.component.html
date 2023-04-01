@@ -1,9 +1,27 @@
-<div>
-    <ul *ngFor="let course of courses let i = index">
-        <li> {{course.CourseName}} <br/>{{course.InstructorName}} <br/> {{course.InstructorEmail}} <br/>{{course.InstructorPhone}} <br/>
-            {{course.CourseDuration}} <br/> {{course.CourseDescription}} <br/>{{course.CourseOutcome}}<br/>
-            {{course.CoursePreRequisites}} <br/>
-            <button mat-button color="accent" [routerLink]="['/editCourse', course._id]">EDIT</button>
-            <button mat-button color="warn" (click)="onDelete(course._id)">DELETE</button> </li> 
-    </ul>
-</div>
+<app-admin-dashboard></app-admin-dashboard>
+<h2>View Courses</h2>
+<mat-accordion>
+    <mat-expansion-panel hideToggle *ngFor="let course of courses let i = index">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{course.CourseName}}
+            </mat-panel-title>
+            <mat-panel-description>
+                InstructorName: {{course.InstructorName}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div> InstructorEmail: {{course.InstructorEmail}}</div>
+        <div> InstructorPhone: {{course.InstructorPhone}} </div>
+        <div> CourseDuration: {{course.CourseDuration}} </div>
+        <div> CourseDescription: {{course.CourseDescription}} </div>
+        <div> CourseOutcome: {{course.CourseOutcome}}</div>
+        <div> CoursePreRequisites: {{course.CoursePreRequisites}} </div>
+        <table>
+        <tr>
+            <td><button mat-button mat-raised-button color="accent" [routerLink]="['/editCourse', course._id]">EDIT</button> </td>
+        <td><button mat-button mat-raised-button color="warn" (click)="onDelete(course._id)">DELETE</button></td>
+        <td><button mat-button mat-raised-button color="accent" [routerLink]="['/editCourse', course._id]">VIEW COURSE CONTENT</button></td>
+        <td><button mat-button mat-raised-button color="accent" [routerLink]="['/editCourse', course._id]">CREATE COURSE CONTENT</button></td></tr>
+    </table>
+    </mat-expansion-panel>
+</mat-accordion>

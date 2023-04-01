@@ -60,7 +60,7 @@ export class CourseCreateComponent implements OnInit {
         );
       }
       else {
-        this.mode = 'Add';
+        this.mode = 'Create';
         this.id = null;
       }
     });
