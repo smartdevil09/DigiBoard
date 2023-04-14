@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> PROJECT </title>
+    
+</head>
+
+<body>
+    
+        <div>
+          <app-student-dashboard></app-student-dashboard>
+        <h1>{{mode}} PROFILE </h1>
+        <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+            <div>
+            <mat-form-field appearance="outline">
+                <mat-label>First Name</mat-label> 
+                 <input matInput id="FirstName" name="FirstName" [(ngModel)]="FirstName"required></mat-form-field>
+               </div>
+               <div>
+                 <mat-form-field appearance="outline">
+                   <mat-label>Last Name</mat-label> 
+                 <input matInput id="LastName" name="LastName" [(ngModel)]="LastName"required></mat-form-field>
+               </div>
+     
+              
+               <div>
+                 <mat-form-field appearance="outline">
+                   <mat-label>Date Of Birth</mat-label>
+                <input matInput id="DateOfBirth" name="DateOfBirth" [(ngModel)]="DateOfBirth" required=""></mat-form-field>
+               </div>
+               <div>
+                <mat-form-field appearance="outline">
+                 <mat-label>Contact Number</mat-label>
+                 <input matInput id="ContactNumber" name="ContactNumber" [(ngModel)]="ContactNumber"required></mat-form-field> 
+               </div>
+               <div>
+                 <mat-form-field appearance="outline">
+                   <mat-label>Email</mat-label>
+                 <input matInput id="Email" name="Email" [(ngModel)]="Email"required></mat-form-field>
+               </div>
+                                  
+              <div>
+            <mat-form-field appearance="outline">
+            <mat-label>University</mat-label>
+            <input matInput id="University" name="University" [(ngModel)]="University" required></mat-form-field>
+         </div>
+         
+         <div>
+                <mat-form-field appearance="outline">
+                <mat-label>Highest Degree</mat-label>
+                <input matInput id="HighestDegree" name="HighestDegree" [(ngModel)]="HighestDegree" required></mat-form-field>
+             </div>
+                             
+          <div>
+            <mat-form-field appearance="outline">
+            <mat-label>Major</mat-label>
+            <input matInput id="Major" name="Major" [(ngModel)]="Major" required></mat-form-field>
+         </div>
+<div>
+            <mat-form-field appearance="outline">
+            <mat-label>Skills</mat-label>
+            <input matInput id="Skills" name="Skills" [(ngModel)]="Skills" required></mat-form-field>
+         </div>
+         <div>
+          <mat-form-field appearance="outline">
+            <mat-label>SelfIntroduction</mat-label>
+            <input matInput id="SelfIntroduction" name="SelfIntroduction" [(ngModel)]="SelfIntroduction" required></mat-form-field>
+          </div>
+
+            <p> Note: Mandatory (*) fields are to be filled for submit button to be enabled</p>
+            <p>
+            <br>
+            <button type="submit" mat-raised-button color="primary">Submit</button>
+        </form>
+       
+    </div>
+</body>
+
+</html>

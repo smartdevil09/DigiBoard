@@ -1,0 +1,36 @@
+<app-student-dashboard></app-student-dashboard>
+<h2>View Profiles</h2>
+<mat-accordion>
+  <mat-expansion-panel hideToggle *ngFor ="let profile of profiles let i = index">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        FirstName: {{profile.FirstName}} LastName: {{profile.LastName}}
+        
+      </mat-panel-title>
+      </mat-expansion-panel-header>
+   
+    <div>DateOfBirth: {{profile.DateOfBirth}} </div>
+    <div>ContactNumber: {{profile.ContactNumber}} </div>
+     <div>Email: {{profile.Email}}</div>
+       <div>University: {{profile.University}}</div>
+        <div>HighestDegree: {{profile.HighestDegree}}</div> 
+         <div>Major: {{profile.Major}}</div>
+          <div>Skills: {{profile.Skills}} </div>
+         <div>SelfIntroduction: {{profile.SelfIntroduction}}</div>
+         <table>
+          <tr>
+            <td><button mat-button  mat-raised-button color="accent" [routerLink]="['/editProfile', profile._id]">EDIT</button></td>
+            <td><button mat-button  mat-raised-button color="warn" (click)="onDelete(profile._id)">DELETE</button></td>
+            <td><button mat-button mat-raised-button color="accent" [routerLink]="['/editProfile', profile._id]">CREATE PAYMENT PROFILE</button></td>
+            <td><button mat-button mat-raised-button color="accent" [routerLink]="['/editProfile', profile._id]">VIEW PAYMENT PROFILE</button></td>
+          </tr>
+         </table>
+        </mat-expansion-panel>
+</mat-accordion>
+
+    
+        
+              
+                 
+      
+

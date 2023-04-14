@@ -1,0 +1,18 @@
+<div class="container">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <div class="example-button-container">
+                <button mat-fab color="primary" aria-label="Example icon button with a home icon"  [routerLink]="['']">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </div>
+            <span>DigiBoard</span>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>
+
+<nav mat-tab-nav-bar  [tabPanel]="tabPanel">
+    <a mat-tab-link routerLink="/student-profile" routerLinkActive="active-link">Student Profile</a>
+    <a mat-tab-link routerLink="/profile-view" routerLinkActive="active-link">View Profiles</a>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+</nav>
